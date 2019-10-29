@@ -17,7 +17,7 @@ var wrapWordsInChildElement = function(el) {
         span.innerText = words[i];
         el.parentNode.insertBefore(span, el);
       }
-      if(i < words.length - 1) 
+      if(i < words.length - 1)
         el.parentNode.insertBefore(document.createTextNode(" "), el);
     };
     el.parentNode.removeChild(el);
@@ -55,7 +55,7 @@ var getLines = function(el) {
 
   var lastOffset = 0, line=[], lines = [], l=0;
   for(var i=0;i<spans.length;i++) {
-    var offset = spans[i].offsetTop+spans[i].getBoundingClientRect().height;
+    var offset = spans[i].offsetTop;
     if(offset == lastOffset) {
       line.push(spans[i]);
     }
