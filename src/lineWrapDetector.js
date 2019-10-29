@@ -9,7 +9,7 @@ var wrapWords = function(text, before, after, join) {
 
 var wrapWordsInChildElement = function(el) {
   if(el.nodeName == '#text') {
-    var words = el.textContent.split(/[\s↵]/g);
+    var words = el.innerText.split(/[\s↵]/g);
     for(var i=0;i<words.length;i++) {
       if(words[i].length > 0) {
         var span = document.createElement('span');
